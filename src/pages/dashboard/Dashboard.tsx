@@ -78,7 +78,7 @@ function Dashboard() {
 		fetchMusics();
 	}, []);
 	return (
-		<section>
+		<section className="dashboard">
 			<Header />
 			<div className="cards__container">
 				{userMusics.map((item, index) => (
