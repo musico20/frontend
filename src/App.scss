@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	// background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+	img {
+		display: block;
+		user-select: none;
+	}
+  button {
+    display: block;
+  }
+
+}
+
+html {
+ scroll-behavior: smooth;
+}
+@font-face {
+	font-family: 'Krona';
+	src: url('/fonts/krona.ttf');
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('/fonts/inter.ttf');
+}
