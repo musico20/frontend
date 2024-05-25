@@ -2,7 +2,7 @@ import './style.scss';
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 
-function TopNav() {
+function Header() {
 	const [showMenu, setShowMenu] = useState(false);
 	const elementRef = useRef<HTMLElement>(null)
 
@@ -37,13 +37,10 @@ function TopNav() {
 				<p>Musico</p>
 			</div>
 			<div className={`links ${!showMenu && 'hidden'}`}>
-				<a href="#home">Home</a>
-				<a href="#about">About</a>
-				<a href="#musics">Musics</a>
-				<a href="#genres">Genres</a>
+				Dashboard
 			</div>
-			<Link to="/signup/all">
-				Sign In <img src="/icons/sign-in.svg" alt="sign-in" />
+			<Link to="/">
+				Sign Out <img src="/icons/sign-in.svg" alt="sign-in" />
 			</Link>
 			<button onClick={() => setShowMenu(!showMenu)} className="menu__btn">
 				<img src={`/icons/${!showMenu?"menu": "cancel"}.svg`} alt="" />
@@ -51,4 +48,4 @@ function TopNav() {
 		</nav>
 	);
 }
-export default TopNav;
+export default Header;

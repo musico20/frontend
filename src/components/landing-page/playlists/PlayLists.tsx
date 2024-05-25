@@ -8,7 +8,7 @@ type PlayListProps = {
 	increasing: boolean;
 };
 
-function PlayList(props: PlayListProps) {
+export function PlayList(props: PlayListProps) {
 	const sign = props.increasing ? '+' : '-';
 	return (
 		<article className="playlist__card">
