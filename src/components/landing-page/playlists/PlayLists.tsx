@@ -20,10 +20,14 @@ export function PlayList(props: PlayListProps) {
 					src={props.image}
 					alt={props.image}
 				/>
+				<img
+					className="music__image blur"
+					src={props.image}
+					alt={props.image}
+				/>
 				<button className="play__btn">
 					<img src="/icons/play.svg" alt="" />
 				</button>
-                <div className="blur"></div>
 			</div>
 			<div className="card__details">
 				<h3>{props.title}</h3>
@@ -55,7 +59,7 @@ function PlayLists() {
 				"https://api.spotify.com/v1/browse/featured-playlists?limit=4",
 				{
 					headers: {
-						'Authorization': "Bearer " + token,
+						Authorization: "Bearer " + token,
 					},
 				}
 			);
