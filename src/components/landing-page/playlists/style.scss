@@ -15,6 +15,11 @@
 		margin-top: 2rem;
 	}
 
+    .loading {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05));
+        background-size: 200%;
+    }
+
 	.playlist__card {
 		border-radius: 0.5rem;
 		overflow: hidden;
