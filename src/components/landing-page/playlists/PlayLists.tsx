@@ -20,7 +20,7 @@ export function PlayList(props: PlayListProps) {
     const handleClick = () => {
         dispatch(setNewID(props.id));
         dispatch(setNewStat(true));
-        console.log('clickb')
+        console.log('click')
     }
 
 	return (
@@ -29,12 +29,12 @@ export function PlayList(props: PlayListProps) {
 				<img
 					className="music__image"
 					src={props.image}
-					alt={props.name}
+					alt={props.title}
 				/>
 				<img
 					className="music__image blur"
 					src={props.image}
-					alt={props.name}
+					alt={props.title}
 				/>
 				<button className="play__btn" onClick={() => handleClick}>
 					<img src="/icons/play.svg" alt="" />

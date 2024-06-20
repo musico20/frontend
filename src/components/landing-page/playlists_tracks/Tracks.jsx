@@ -68,7 +68,7 @@ function Tracks() {
 			className={status ? "playlist__tracks active" : "playlist__tracks"}
 		>
 			<img
-				src="/public/icons/cancel.svg"
+				src="/icons/cancel.svg"
 				alt="Cancel"
 				className="cancelBtn"
 				onClick={() => dispatch(setNewStat(false))}
