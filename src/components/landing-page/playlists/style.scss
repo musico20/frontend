@@ -87,6 +87,8 @@
 			font-family: "Inter";
 			font-size: 1.1rem;
 			color: #9f9f9f;
+            z-index: 5;
+            position: relative;
 		  }
 		  .card__metrics {
 			 display: flex;

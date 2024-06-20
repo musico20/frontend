@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import "./style.scss";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setNewID } from "../../../features/playlistSlice.jsx";
+import { setNewStat } from "../../../features/tracksStatus";
 
 type PlayListProps = {
+	id: string;
 	image: string;
 	title: string;
 	cost: number;
@@ -12,20 +15,28 @@ type PlayListProps = {
 
 export function PlayList(props: PlayListProps) {
 	const sign = props.increasing ? "+" : "-";
+	const dispatch = useDispatch();
+
+    const handleClick = () => {
+        dispatch(setNewID(props.id));
+        dispatch(setNewStat(true));
+        console.log('clickb')
+    }
+
 	return (
 		<article className="playlist__card">
 			<div className="img__container">
 				<img
 					className="music__image"
 					src={props.image}
-					alt={props.image}
+					alt={props.name}
 				/>
 				<img
 					className="music__image blur"
 					src={props.image}
-					alt={props.image}
+					alt={props.name}
 				/>
-				<button className="play__btn">
+				<button className="play__btn" onClick={() => handleClick}>
 					<img src="/icons/play.svg" alt="" />
 				</button>
 			</div>
@@ -82,6 +93,7 @@ function PlayLists() {
 					featPlaylists.map((playlist, index) => (
 						<PlayList
 							key={index}
+							id={playlist.id}
 							image={playlist.images[0].url}
 							increasing={true}
 							percent={3.5}
